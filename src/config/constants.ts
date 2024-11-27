@@ -14,7 +14,7 @@ export const SERVICES = [
   {
     title: 'Snow Removal',
     description: 'Reliable snow removal services to keep your property safe and accessible during winter.',
-    image: 'https://images.unsplash.com/photo-1516648064-c0929e14f1df?auto=format&fit=crop&q=80',
+    image: 'https://images.pexels.com/photos/4325328/pexels-photo-4325328.jpeg',
     icon: 'Snowflake'
   }
 ];

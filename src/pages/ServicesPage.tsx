@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { SERVICES, SERVICE_AREAS } from '../config/constants';
 import ServiceCard from '../components/ServiceCard';
 import { Brush, Trees, Snowflake } from 'lucide-react';
@@ -12,6 +13,11 @@ const iconMap = {
 export default function ServicesPage() {
   return (
     <div className="pt-20">
+      <SEO 
+        title="Professional Home Services - Cleaning, Yard Care & Snow Removal"
+        description="Expert home services in GTA: Professional house cleaning, yard maintenance, and reliable snow removal. Serving Toronto, Markham, Scarborough, and surrounding areas."
+        keywords="house cleaning service GTA, yard maintenance Toronto, snow removal service, professional home cleaning, garden care, winter services GTA"
+      />
       {/* Services Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">

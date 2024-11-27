@@ -131,7 +131,7 @@ export default function ServiceHighlights() {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1516648064-c0929e14f1df?auto=format&fit=crop&q=80" 
+                src="https://images.pexels.com/photos/4325328/pexels-photo-4325328.jpeg" 
                 alt="Snow removal" 
                 className="w-full h-[400px] object-cover"
               />

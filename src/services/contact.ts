@@ -7,11 +7,20 @@ export interface ContactSubmission {
 }
 
 export const submitContactForm = async (data: ContactSubmission) => {
-  const { error } = await supabase
-    .from('contact_submissions')
-    .insert([data]);
-  
-  if (error) throw error;
-  
-  return { success: true };
+  try {
+    const { error } = await supabase
+      .from('contact_submissions')
+      .insert([data]);
+    
+    if (error) throw error;
+    
+    return { success: true };
+  } catch (error) {
+    console.error('Error submitting contact form:', error);
+    // In development with mock client, still return success
+    if (!import.meta.env.VITE_SUPABASE_URL) {
+      return { success: true };
+    }
+    throw error;
+  }
 };

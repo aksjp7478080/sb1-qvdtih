@@ -7,21 +7,39 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://homerootscare.com/#services</loc>
+    <loc>https://homerootscare.com/services</loc>
+    <lastmod>2024-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://homerootscare.com/about</loc>
     <lastmod>2024-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://homerootscare.com/#about</loc>
+    <loc>https://homerootscare.com/contact</loc>
+    <lastmod>2024-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://homerootscare.com/services#cleaning</loc>
     <lastmod>2024-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://homerootscare.com/#contact</loc>
+    <loc>https://homerootscare.com/services#yard-management</loc>
     <lastmod>2024-03-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://homerootscare.com/services#snow-removal</loc>
+    <lastmod>2024-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

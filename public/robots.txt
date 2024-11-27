@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://homerootscare.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Additional rules
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Prevent crawling of certain paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/

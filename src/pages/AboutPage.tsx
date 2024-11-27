@@ -1,9 +1,15 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { Award, Shield, Users, Leaf } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="pt-20">
+      <SEO 
+        title="About Our Professional Home Services Company"
+        description="Learn about HomeRootsCare's professional home services in GTA. Experienced team providing quality house cleaning, yard maintenance, and snow removal services."
+        keywords="home service company GTA, professional cleaners Toronto, about HomeRootsCare, trusted cleaning service, yard maintenance company"
+      />
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">About HomeRootsCare</h1>
@@ -131,7 +137,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <img 
-                  src="https://images.unsplash.com/photo-1516648064-c0929e14f1df?auto=format&fit=crop&q=80" 
+                  src="https://images.pexels.com/photos/4325328/pexels-photo-4325328.jpeg" 
                   alt="Snow removal" 
                   className="rounded-lg h-64 w-full object-cover"
                 />
