@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { submitContactForm } from '../services/contact';
 import toast from 'react-hot-toast';
+import { Loader2 } from 'lucide-react';
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,11 +17,11 @@ export default function ContactForm() {
 
     try {
       await submitContactForm(formData);
-      toast.success('Message sent successfully!');
+      toast.success('Message sent successfully! We\'ll get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Failed to send message. Please try again.');
+      toast.error('Failed to send message. Please try again or contact us directly at homerootscare.ca@gmail.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -42,7 +43,9 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+          disabled={isSubmitting}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          placeholder="Your name"
         />
       </div>
       <div>
@@ -54,7 +57,9 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+          disabled={isSubmitting}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          placeholder="your.email@example.com"
         />
       </div>
       <div>
@@ -66,15 +71,24 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+          disabled={isSubmitting}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          placeholder="How can we help you?"
         ></textarea>
       </div>
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? (
+          <>
+            <Loader2 className="h-5 w-5 animate-spin" />
+            <span>Sending...</span>
+          </>
+        ) : (
+          <span>Send Message</span>
+        )}
       </button>
     </form>
   );
