@@ -1,35 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Star, Clock } from 'lucide-react';
+import ScrollReveal from '../ScrollReveal';
 
 export default function ServiceHighlights() {
   return (
     <div className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Price Guarantee Banner */}
-        <div className="bg-emerald-50 rounded-lg p-8 mb-16 text-center">
-          <h2 className="text-3xl font-bold text-emerald-800 mb-4">Best Price Guarantee</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            We guarantee the most competitive prices in the GTA. Find a better price? We'll match it and give you an additional 5% off!
-          </p>
-          <div className="flex justify-center space-x-8">
-            <div className="flex items-center">
-              <Shield className="h-6 w-6 text-emerald-600 mr-2" />
-              <span className="text-gray-700">Price Match</span>
-            </div>
-            <div className="flex items-center">
-              <Star className="h-6 w-6 text-emerald-600 mr-2" />
-              <span className="text-gray-700">Quality Service</span>
-            </div>
-            <div className="flex items-center">
-              <Clock className="h-6 w-6 text-emerald-600 mr-2" />
-              <span className="text-gray-700">Timely Delivery</span>
+        <ScrollReveal>
+          <div className="bg-emerald-50 rounded-lg p-8 mb-16 text-center">
+            <h2 className="text-3xl font-bold text-emerald-800 mb-4">Best Price Guarantee</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              We guarantee the most competitive prices in the GTA. Find a better price? We'll match it and give you an additional 5% off!
+            </p>
+            <div className="flex justify-center space-x-8">
+              <div className="flex items-center">
+                <Shield className="h-6 w-6 text-emerald-600 mr-2" />
+                <span className="text-gray-700">Price Match</span>
+              </div>
+              <div className="flex items-center">
+                <Star className="h-6 w-6 text-emerald-600 mr-2" />
+                <span className="text-gray-700">Quality Service</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="h-6 w-6 text-emerald-600 mr-2" />
+                <span className="text-gray-700">Timely Delivery</span>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Home & Office Cleaning */}
-        <div className="mb-20">
+        <ScrollReveal className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Professional Home & Office Cleaning</h2>
@@ -63,10 +66,10 @@ export default function ServiceHighlights() {
               />
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Yard Management */}
-        <div className="mb-20">
+        <ScrollReveal className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img 
@@ -100,10 +103,10 @@ export default function ServiceHighlights() {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Snow Removal */}
-        <div>
+        <ScrollReveal>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Reliable Snow Removal</h2>
@@ -137,7 +140,7 @@ export default function ServiceHighlights() {
               />
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   );
